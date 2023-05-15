@@ -1,4 +1,4 @@
-var env = process.env.NODE_ENV ? 'beamup':'local';
+var env = process.env.NODE_ENV ? 'remote':'local';
 
 var config = {
     addon: 'started',
@@ -6,9 +6,9 @@ var config = {
 
 switch (env) {
     //Public server build.
-    case 'beamup':
+    case 'remote':
 		config.port = process.env.PORT
-        config.local = "5a0d1888fa64-your-iptv.baby-beamup.club"
+        config.local = "https://your-iptv.vercel.app/"
         break;
 
     //Local sever build.
